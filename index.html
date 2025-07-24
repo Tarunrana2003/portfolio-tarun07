@@ -5,245 +5,172 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tarun Rana | Portfolio</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-
-
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
+      font-family: 'Outfit', sans-serif;
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2);
+      padding: 0;
+      background-color: #fdfdfd;
+      line-height: 1.6;
       color: #333;
+      scroll-behavior: smooth;
     }
 
     header {
       text-align: center;
-      padding: 3rem 1rem 1rem;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #2193b0, #6dd5ed);
+      color: white;
     }
 
-    header img {
-      width: 140px;
-      height: 140px;
+    .profile-img {
+      width: 150px;
       border-radius: 50%;
-      border: 4px solid #333;
-      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #fff;
     }
 
-    h1 {
-      margin: 1rem 0 0.2rem;
-      font-size: 2.5rem;
-      font-weight: 700;
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background: #333;
+      padding: 10px;
+      margin: 0;
     }
 
-    .subtitle {
-      font-size: 1.2rem;
-      color: #555;
-      margin-bottom: 0.2rem;
+    nav ul li {
+      margin: 0 15px;
     }
 
-    .location {
-      color: #888;
-      margin-bottom: 1rem;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     section {
-      margin-bottom: 2rem;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
     }
 
     h2 {
-      border-left: 4px solid #4a90e2;
-      padding-left: 0.5rem;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #222;
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    .resume-btn {
+      display: inline-block;
+      background: linear-gradient(to right, #4CAF50, #388E3C);
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      margin-top: 10px;
     }
 
-    ul li::before {
-      content: '✓';
-      margin-right: 0.5rem;
-      color: #4a90e2;
-    }
-
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+    .resume-btn:hover {
+      background: linear-gradient(to right, #45a049, #2e7d32);
+      transform: translateY(-3px) scale(1.03);
     }
 
     footer {
       text-align: center;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #666;
+      background-color: #222;
+      color: white;
+      padding: 20px;
     }
 
-    .btn {
-      background: #4a90e2;
-      color: #fff;
-      padding: 0.5rem 1.5rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      text-decoration: none;
-      margin-top: 1rem;
-      display: inline-block;
-      transition: background 0.3s;
+    ul {
+      padding-left: 20px;
     }
 
-    .btn:hover {
-      background: #357ABD;
+    a {
+      color: #007bff;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <img src="my profile photo.jpg" alt="Tarun Rana" />
+  <header data-aos="fade-down">
+    <img src="tarun.jpg" alt="Tarun Rana" class="profile-img" />
     <h1>Tarun Rana</h1>
-    <p class="subtitle">Passionate Developer crafting clean, responsive, and user-friendly websites</p>
-    <p class="location">Jeeran, Neemuch District, Madhya Pradesh, India</p>
-    <a href="Tarun_Rana_Resume.pdf" class="btn" download>Download Resume</a>
+    <p>Web Developer | Python Enthusiast | Intern at Walmart, Accenture</p>
   </header>
 
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <section>
+    <section id="about" data-aos="fade-up">
       <h2>About Me</h2>
-      <p>I'm a final year B.Tech CSE student at Mandsaur University (2022–2026). I enjoy building web applications with
-        modern technologies, focusing on responsive design and user experience.</p>
-      <p>I’ve completed internships and academic projects focused on frontend development. I’m also exploring backend
-        technologies and aim to become a full-stack developer by the end of 2025.</p>
-      <p>Currently interning with <strong>TechnoHacks Solutions (Batch 99)</strong> on practical web design tasks as
-        part of an AICTE-approved internship program.</p>
-
+      <p>
+        I am a passionate web developer with a strong foundation in HTML, CSS,
+        and JavaScript. I’ve completed internships with global companies and am
+        constantly working on new projects to enhance my skills.
+      </p>
     </section>
 
-    <section>
-      <h2>Skills</h2>
-      <div class="skills">
-        <div>
-          <strong>Frontend</strong>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>Wix Studio</li>
-          </ul>
-        </div>
-        <div>
-          <strong>Backend</strong>
-          <ul>
-            <li>Node.js (learning)</li>
-            <li>Express.js (learning)</li>
-          </ul>
-        </div>
-        <div>
-          <strong>Tools & Platforms</strong>
-          <ul>
-            <li>Git & GitHub</li>
-            <li>VS Code</li>
-            <li>Figma (basic)</li>
-            <li>RapidWorkers</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
-    <section>
+    <section id="projects" data-aos="fade-up">
       <h2>Projects</h2>
       <ul>
-        <h4>Walmart USA – Advanced Software Engineering Internship (Forage, July 2025):</h4>
-        <ul>
-          <li>Completed job simulation solving real-world technical projects across Walmart teams</li>
-          <li>Built a custom heap data structure in Java for the shipping department</li>
-          <li>Designed a UML class diagram with multiple DB modes</li>
-          <li>Created an ERD for a normalized database for pet product division</li>
-        </ul>
-        <p>
-          <a href="https://github.com/Tarunrana2003/portfolio-tarun07" target="_blank">View on GitHub</a>
-        </p>
-        <li><strong>Forage Accenture Virtual Internship:</strong>
-          Completed tasks →
-          <a href="https://github.com/Tarunrana2003/portfolio-tarun07" target="_blank">View on GitHub</a>
-        </li>
-        <li><strong>First Contact Internship Task:</strong> Website designed using Wix Studio →
-          <a href="https://tr2854892.wixstudio.com/first-contact-task" target="_blank">View Project</a>
-        </li>
+        <li><strong>Portfolio Website:</strong> Personal portfolio built using HTML, CSS. <a href="#">Live Demo</a></li>
+        <li><strong>To-Do List App:</strong> Simple task manager using JS and DOM manipulation. (Upcoming)</li>
       </ul>
-      <div class="project-card">
-        <h4>Web Development Internship – TechnoHacks Solutions (Batch 99)</h4>
-        <p>Currently pursuing a 1-month AICTE-approved internship focused on Front-End Web Development. Building
-          responsive websites using HTML, CSS, and JavaScript. Working on tasks like personal portfolio, navigation
-          bar, and landing pages.</p>
-        <a href="https://www.linkedin.com/posts/tarun-rana-5178a3293_webdevelopment-internship-technohacks-activity-7351600200223772672-nMkc"
-          target="_blank">View LinkedIn Proof</a>
-      </div>
     </section>
 
-    <section>
-      <h2>Certifications</h2>
+    <section id="resume" data-aos="fade-up">
+      <h2>Resume</h2>
+      <p>You can view or download my updated resume here:</p>
+      <a href="Tarun_Rana_Resume.pdf" target="_blank" class="resume-btn">📄 View Resume (PDF)</a>
+    </section>
+
+    <section id="certificates" class="certificates" data-aos="fade-up">
+      <h2>Certificates</h2>
       <ul>
-        <li><strong>Walmart USA – Advanced Software Engineering Internship (Forage, July 2025):</strong>
-          <a href="walmart_completion_certificate.pdf" target="_blank">View Certificate</a>
-        </li>
-        <li><strong>Forage Accenture Virtual Internship Certificate:</strong>
-          <a href="Accenture_Nordics_Internship_Certificate.pdf" target="_blank">View Certificate</a>
-        </li>
-        <li><strong>LetsUpgrade HTML & CSS Bootcamp – July 2025:</strong>
-          <a href="LUEHTMLJUL125619lucertificate.pdf" target="_blank">View Certificate</a>
-        </li>
-        <li><strong>Infosys Springboard:</strong>
-          Python Programming Fundamentals (June 2025) – Proof available on request
-        </li>
-        <li><strong>ICAT Qualification:</strong>
-          Certified in Programming Basics – Proof available on request
-        </li>
+        <li>Web Development Virtual Experience – Walmart Global Tech (Forage)</li>
+        <li>Developer Program – Accenture North America (Forage)</li>
+        <li>HTML Certificate – LearnUp Edutech</li>
+        <li>Python Foundation – Infosys Springboard</li>
       </ul>
     </section>
 
-    <section>
+    <section id="contact" data-aos="fade-up">
       <h2>Contact</h2>
-      <ul style="font-size: 1.1rem;">
-        <li>
-          <i class="fas fa-envelope" style="color: #4a90e2; margin-right: 8px;"></i>
-          <strong>Email:</strong> <a href="mailto:tr2854892@gmail.com">tr2854892@gmail.com</a>
-        </li>
-        <li>
-          <i class="fab fa-linkedin" style="color: #0077b5; margin-right: 8px;"></i>
-          <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tarun-rana-5178a3293"
-            target="_blank">tarun-rana-5178a3293</a>
-        </li>
-        <li>
-          <i class="fab fa-github" style="color: #000; margin-right: 8px;"></i>
-          <strong>GitHub:</strong> <a href="https://github.com/Tarunrana2003" target="_blank">Tarunrana2003</a>
-        </li>
-      </ul>
+      <p><strong>Email:</strong> <a href="mailto:tr2854892@gmail.com">tr2854892@gmail.com</a></p>
+      <p><strong>Gmail:</strong> <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Open Gmail</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Tarunrana2003" target="_blank">github.com/Tarunrana2003</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tarun-rana-5178a3293" target="_blank">linkedin.com/in/tarun-rana-5178a3293</a></p>
     </section>
-
-
-
   </main>
 
   <footer>
-    &copy; 2025 Tarun Rana | Web Dev Intern @ TechnoHacks | All Rights Reserved
+    <p>&copy; 2025 Tarun Rana. All rights reserved.</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 </body>
 
 </html>
